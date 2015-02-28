@@ -1,0 +1,9 @@
+language: julia
+julia:
+  - release
+  - nightly
+script:
+  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+  - make
+  - make alt
+  - LD_LIBRARY_PATH=. julia main.jl
