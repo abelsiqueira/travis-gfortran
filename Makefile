@@ -1,4 +1,5 @@
 all:
+	make -C lib1
 	gfortran -c -o code2.o code2.f90 -fPIC
 
 alt: all
